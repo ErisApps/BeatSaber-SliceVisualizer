@@ -2,7 +2,6 @@ using System.Runtime.CompilerServices;
 using IPA.Config.Stores;
 using IPA.Config.Stores.Attributes;
 using IPA.Config.Stores.Converters;
-using SiraUtil.Converters;
 using UnityEngine;
 using SliceVisualizer.Models;
 
@@ -11,7 +10,6 @@ namespace SliceVisualizer.Configuration
 {
     internal class PluginConfig
     {
-        internal static PluginConfig Instance = null!;
         public virtual bool Enabled { get; set; } = true;
         public virtual float SliceWidth { get; set; } = 0.05f;
 
@@ -45,7 +43,6 @@ namespace SliceVisualizer.Configuration
         public virtual float CenterScale { get; set; } = 0.2f;
         public virtual float ArrowScale { get; set; } = 0.6f;
         public virtual float UIOpacity { get; set; } = 1.0f;
-        [UseConverter(typeof(Vector3Converter))]
         public virtual Vector3 CanvasOffset { get; set; } = new Vector3(0f, 0f, 16f);
         public virtual float CanvasScale { get; set; } = 1f;
     }

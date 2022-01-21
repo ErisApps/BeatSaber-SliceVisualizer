@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using SiraUtil.Tools;
+using SiraUtil.Logging;
 using UnityEngine;
 using Zenject;
 
@@ -70,7 +70,7 @@ namespace SliceVisualizer
             using var stream = assembly.GetManifestResourceStream(resourcePath);
             if (stream == null)
             {
-                _siraLog.Warning($"Couldn't find embedded resource {resourcePath}");
+                _siraLog.Warn($"Couldn't find embedded resource {resourcePath}");
                 return null;
             }
 

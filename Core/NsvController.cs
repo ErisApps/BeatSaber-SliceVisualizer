@@ -7,6 +7,7 @@ using Zenject;
 using HMUI;
 using BeatSaberMarkupLanguage.Tags;
 using BeatSaberMarkupLanguage.Components.Settings;
+using SiraUtil.Logging;
 using SiraUtil.Tools;
 
 namespace SliceVisualizer.Core
@@ -23,9 +24,9 @@ namespace SliceVisualizer.Core
 
         private static readonly int MaxItems = 12;
 
-        public NsvController(BeatmapObjectManager beatmapObjectManager, Factories.NsvBlockFactory blockFactory, SiraLog logger)
+        public NsvController(BeatmapObjectManager beatmapObjectManager, Factories.NsvBlockFactory blockFactory, SiraLog logger, PluginConfig config)
         {
-            _config = PluginConfig.Instance;
+            _config = config;
             _logger = logger;
             _beatmapObjectManager = beatmapObjectManager;
             _slicedBlockPool = new NsvSlicedBlock[MaxItems];
@@ -52,7 +53,7 @@ namespace SliceVisualizer.Core
             }
             catch (Exception err)
             {
-                _logger.Info(string.Format("Cannot create checkbox: {0}", err));
+                _logger.Info($"Cannot create checkbox: {err}");
             }
         }
 
@@ -78,7 +79,7 @@ namespace SliceVisualizer.Core
                 slicedBlock.Dispose();
             }
         }
-        
+
         private void OnNoteCut(NoteController noteController, in NoteCutInfo noteCutInfo)
         {
             if (!_config.Enabled)
