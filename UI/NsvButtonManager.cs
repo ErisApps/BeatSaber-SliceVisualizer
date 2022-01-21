@@ -27,7 +27,7 @@ namespace SliceVisualizer.UI
 
         private void OnClick()
         {
-            if (_lazySettingsFlowCoordinator?.Value == null)
+            if (_lazySettingsFlowCoordinator.Value == null)
             {
                 return;
             }

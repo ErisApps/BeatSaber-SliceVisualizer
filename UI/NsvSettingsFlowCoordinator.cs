@@ -2,6 +2,7 @@ using System;
 using BeatSaberMarkupLanguage;
 using HMUI;
 using SiraUtil.Logging;
+using Zenject;
 
 namespace SliceVisualizer.UI
 {
@@ -10,6 +11,7 @@ namespace SliceVisualizer.UI
         private SiraLog _siraLog = null!;
         private NsvSettingsViewController _settingsViewController = null!;
 
+        [Inject]
         internal void Construct(SiraLog siraLog, NsvSettingsViewController settingsViewController)
         {
             _settingsViewController = settingsViewController;
