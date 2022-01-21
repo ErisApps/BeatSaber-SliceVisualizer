@@ -3,7 +3,7 @@ using Zenject;
 
 namespace SliceVisualizer.Installers
 {
-    public class NsvMenuInstaller : Installer
+    internal class NsvMenuInstaller : Installer
     {
         public override void InstallBindings()
         {

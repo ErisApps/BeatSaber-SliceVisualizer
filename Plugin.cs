@@ -17,7 +17,7 @@ namespace SliceVisualizer
         /// Only use [Init] with one Constructor.
         /// </summary>
         [Init]
-        public void Init(Logger logger, Config conf, Zenjector zenject)
+        public Plugin(Logger logger, Config conf, Zenjector zenject)
         {
             zenject.UseLogger(logger);
 
