@@ -74,7 +74,7 @@ namespace SliceVisualizer
                 return null;
             }
 
-            byte[] imageData = new byte[stream.Length];
+            var imageData = new byte[stream.Length];
             stream.Read(imageData, 0, (int) stream.Length);
             if (imageData.Length == 0)
             {

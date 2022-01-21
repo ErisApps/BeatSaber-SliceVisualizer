@@ -1,14 +1,12 @@
 using System;
 using SliceVisualizer.Configuration;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
 using HMUI;
 using BeatSaberMarkupLanguage.Tags;
 using BeatSaberMarkupLanguage.Components.Settings;
 using SiraUtil.Logging;
-using SiraUtil.Tools;
 
 namespace SliceVisualizer.Core
 {

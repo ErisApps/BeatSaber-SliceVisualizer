@@ -1,5 +1,4 @@
 using SliceVisualizer.UI;
-using SliceVisualizer.ViewControllers;
 using Zenject;
 
 namespace SliceVisualizer.Installers

@@ -2,7 +2,6 @@ using System;
 using BeatSaberMarkupLanguage;
 using HMUI;
 using SiraUtil.Logging;
-using SliceVisualizer.ViewControllers;
 
 namespace SliceVisualizer.UI
 {

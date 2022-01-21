@@ -3,7 +3,7 @@ using BeatSaberMarkupLanguage.ViewControllers;
 using SliceVisualizer.Configuration;
 using Zenject;
 
-namespace SliceVisualizer.ViewControllers
+namespace SliceVisualizer.UI
 {
     internal class NsvSettingsViewController : BSMLResourceViewController
     {
